@@ -19,7 +19,17 @@ public class QuickSortAndBSearch {
         int result1 = bsearchBack(a,0,a.length-1,value);
         System.out.println(result+"\t"+result1);
     }
+/*
+二分查找
+分析：
+    适用条件：
+    1.二分查找依赖的是顺序表结构，要有随机访问的特性即数组。
+    2.针对的是有序数组
+    3.数据量不适合太小（太小logn 的优势发挥不出来，但是如果比较操作复杂，可以使用二分），
+    也不要太大(数据的结构是数组，数据需要连续的空间)
 
+    时间复杂度(o(logn))  logn的时间复杂度 是很优秀的，在一些情况下比 常量级的还快
+*/
     private static int bsearchBack(int[] A, int lower, int hight, int value) {
         if(lower > hight) return -1;
         int mid = lower + ((hight - lower)>>1);
